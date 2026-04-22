@@ -321,6 +321,7 @@ defmodule Bumblebee.Audio.SpeechToTextWhisper do
       fn
         {[], buffer_size} ->
           {[], {[], buffer_size}}
+
         {buffer, buffer_size} ->
           {[Nx.concatenate(buffer)], {buffer, buffer_size}}
       end,
